@@ -1,36 +1,133 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Veekshith Gullapudi - Personal Portfolio
 
-## Getting Started
+A modern, responsive, and performance-optimized personal portfolio builder using **Next.js 14**, **React**, **TypeScript**, and **Tailwind CSS**. This project showcases professional experience, skills, and projects with a clean, animated interface.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Responsive Design**: Fully responsive layout optimized for mobile, tablet, and desktop.
+- **Dynamic Content**: Centralized data management via `lib/data.ts` for easy updates.
+- **Smooth Animations**: powered by `framer-motion` for engaging entrance and scroll effects.
+- **Dark Mode**: Integrated theme switching (light/dark/system).
+- **SEO Optimized**: Server-side rendered content for better search engine visibility.
+
+## 🛠 Tech Stack
+
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+
+## 🏗 Architecture
+
+The application follows a modular, component-based architecture. Data is decoupled from UI components to simplify maintenance.
+
+```mermaid
+graph TD
+    subgraph "Data Layer"
+        Data[lib/data.ts]
+        Interfaces[TypeScript Interfaces]
+    end
+
+    subgraph "UI Components (components/sections/)"
+        Hero[Hero.tsx]
+        About[About.tsx]
+        Skills[Skills.tsx]
+        Exp[Experience.tsx]
+        Proj[Projects.tsx]
+        Cert[Certifications.tsx]
+        Contact[Contact.tsx]
+    end
+
+    subgraph "Layout & Routing (app/)"
+        Layout[layout.tsx]
+        Page[page.tsx]
+        Navbar[Navbar.tsx]
+        Footer[Footer.tsx]
+    end
+
+    Data --> Hero
+    Data --> About
+    Data --> Skills
+    Data --> Exp
+    Data --> Proj
+    Data --> Cert
+    Data --> Contact
+
+    Layout --> Navbar
+    Layout --> Footer
+    Page --> Hero
+    Page --> About
+    Page --> Skills
+    Page --> Exp
+    Page --> Proj
+    Page --> Cert
+    Page --> Contact
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏁 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Node.js**: v18.17.0 or higher
+- **npm**: v9.0.0 or higher
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/veekshith/portfolio.git
+    cd portfolio
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Running Locally
 
-## Deploy on Vercel
+Start the development server:
+```bash
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Building for Production
+
+Create an optimized build:
+```bash
+npm run build
+```
+
+Start the production server:
+```bash
+npm start
+```
+
+## 🔮 Future Enhancements (Backend Integration)
+
+To handle dynamic form submissions and content management without code changes, the following backend architecture is planned:
+
+```mermaid
+flowchart LR
+    Client[Next.js Frontend] <--> API[FastAPI / Express Backend]
+    API <--> DB[(PostgreSQL / MongoDB)]
+    API --> Email[Email Service (resend/AWS SES)]
+    API --> LLM[Gemini API (Resume Generator)]
+
+    subgraph "Backend Services"
+        Logic[Business Logic]
+        Auth[Authentication]
+    end
+```
+
+### Planned Features:
+-   **Contact Form API**: Replace `mailto` links with a secure API endpoint to store messages and send email notifications.
+-   **CMS Integration**: Fetch `Skills`, `Experience`, and `Projects` from a database (PostgreSQL) or Headless CMS (Strapi/Sanity) instead of `lib/data.ts`.
+-   **Resume Generator Integration**: Directly link the portfolio to the Generative AI Resume Generator backend.
+
+## 📄 License
+
+&copy; 2025 Veekshith Gullapudi. All rights reserved.
