@@ -106,6 +106,28 @@ Start the production server:
 npm start
 ```
 
+
+## 🚀 Deploying to GitHub Pages
+
+This project is configured for automated deployment to GitHub Pages using GitHub Actions.
+
+### Setup Instructions
+
+1.  **Push to GitHub**: Ensure your code is pushed to a GitHub repository.
+2.  **Configure Repository Settings**:
+    -   Go to your repository on GitHub.
+    -   Navigate to **Settings** -> **Pages**.
+    -   Under **Build and deployment** > **Source**, select **GitHub Actions**.
+    -   (Optional) If using a custom domain, configure it here.
+3.  **Trigger Deployment**:
+    -   The deployment workflow runs automatically on every push to the `main` branch.
+    -   You can verify the progress in the **Actions** tab of your repository.
+
+### Configuration Notes
+
+-   **Static Export**: The project uses `output: 'export'` in `next.config.ts` to generate a static site.
+-   **Images**: `images: { unoptimized: true }` is enabled since GitHub Pages doesn't support Next.js Image Optimization.
+
 ## 🔮 Future Enhancements (Backend Integration)
 
 To handle dynamic form submissions and content management without code changes, the following backend architecture is planned:

@@ -25,7 +25,7 @@ export function Hero() {
                     className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary text-secondary-foreground text-sm font-medium mb-6"
                 >
                     <Terminal className="w-4 h-4" />
-                    <span>Open to new opportunities</span>
+                    <span>Permanent Resident of Canada • Open for New Opportunities</span>
                 </motion.div>
 
                 <motion.h1

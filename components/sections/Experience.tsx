@@ -42,7 +42,11 @@ export function Experience() {
                                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
                                     <div>
                                         <h3 className="text-xl font-bold text-foreground">{job.role}</h3>
-                                        <div className="text-lg font-medium text-blue-600">{job.company}</div>
+                                        <div className="flex flex-wrap items-center gap-2 text-lg font-medium">
+                                            <span className="text-blue-600">{job.company}</span>
+                                            <span className="hidden sm:inline text-muted-foreground">•</span>
+                                            <span className="text-muted-foreground text-sm font-normal">{job.location}</span>
+                                        </div>
                                     </div>
                                     <div className="flex items-center text-muted-foreground text-sm font-medium bg-secondary/50 px-3 py-1 rounded-full w-fit">
                                         <Calendar className="w-4 h-4 mr-2" />

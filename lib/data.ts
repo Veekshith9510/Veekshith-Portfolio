@@ -18,6 +18,7 @@ export interface Experience {
     company: string;
     role: string;
     period: string;
+    location: string;
     description: string[];
 }
 
@@ -90,21 +91,27 @@ export const DATA = {
     ] as SkillCategory[],
     experience: [
         {
-            company: "Independent Projects & Professional Development",
-            role: "Software Architect & Developer",
-            period: "Nov 2024 – Present",
+            company: "Innopay Technologies Pvt Ltd",
+            role: "Full Stack Developer",
+            period: "Nov 2024 – Dec 2025",
+            location: "India (Fully remote)",
             description: [
-                "Earned AWS Certified Solutions Architect – Associate (May 2025), strengthening expertise in cloud architecture, scalability, security, and cost optimization.",
-                "Designed and developed a Generative AI–powered Resume Generator, automating resume tailoring based on job descriptions using Google Gemini LLM.",
-                "Built a full-stack architecture using Python (FastAPI), React, Angular, and SQLite, integrating scalable async AI APIs with modern UI workflows.",
-                "Applied prompt engineering techniques and context-aware AI workflows to produce role-specific, ATS-compatible resume enhancements.",
-                "Strengthened DevOps discipline through Git-based version control and CI/CD concepts."
+                "Developed and maintained Java Spring Boot microservices for payment processing, invoicing, and reconciliation, supporting 1,500–2,000 transactions/minute during peak business hours.",
+                "Implemented event-driven workflows using Apache Kafka (payment → invoice → ledger), reducing synchronous processing latency by ~35% and improving system resilience.",
+                "Designed and built React and Angular-based role-driven dashboards integrated with backend APIs, improving merchant onboarding efficiency and reducing manual operational steps by ~30%.",
+                "Automated cloud infrastructure provisioning and application delivery using Terraform, Docker, Jenkins, and AWS EKS, reducing deployment time by ~60% and supporting 2–3 zero-downtime production releases per week.",
+                "Integrated NPCI UPI payment flows and GST e-invoicing APIs, achieving >99.5% transaction-to-invoice reconciliation accuracy across multi-tenant clients.",
+                "Implemented secure authentication and authorization using AWS Cognito, OAuth2, and JWT, enforcing RBAC and supporting 10K+ concurrent authenticated sessions.",
+                "Built Infrastructure as Code (Terraform) to provision AWS VPCs, EC2/EKS, RDS, Cognito, and S3, reducing environment setup time from days to under 1 hour.",
+                "Designed and maintained CI/CD pipelines with Jenkins (build → test → Docker → Helm deploy to EKS), enabling 2–3 production releases per week with zero-downtime deployments.",
+                "Supported live production systems with 99.9% uptime, reducing MTTR by ~40% through automated alerts, runbooks, and structured incident response using CloudWatch and ELK."
             ],
         },
         {
             company: "BNP Paribas",
             role: "IT Developer",
             period: "Oct 2022 – Oct 2024",
+            location: "Montreal, Canada (Hybrid)",
             description: [
                 "Developed RESTful microservices using Spring Boot and Spring Core, ensuring scalability and easy integration with other systems.",
                 "Modernized legacy components by upgrading outdated libraries/frameworks and resolving major security vulnerabilities (Log4j, Struts, CVE patches).",
@@ -118,6 +125,7 @@ export const DATA = {
             company: "Morgan Stanley",
             role: "Full Stack Developer",
             period: "Jan 2022 – Aug 2022",
+            location: "Montreal, Canada (Hybrid)",
             description: [
                 "Implemented Angular Universal to enable server-side rendering (SSR), enhancing SEO and application performance.",
                 "Developed asynchronous FastAPI endpoints to enhance throughput for I/O-heavy workflows and performed large-scale data manipulation using Python.",
@@ -130,6 +138,7 @@ export const DATA = {
             company: "Wipro",
             role: "Project Engineer",
             period: "Feb 2018 – Jan 2019",
+            location: "Hyderabad, India (On-Site)",
             description: [
                 "Designed and developed RESTful APIs for data exchange and backend processes using Java and Node.js.",
                 "Conducted performance optimization using lazy loading and code splitting in React applications.",
@@ -141,6 +150,7 @@ export const DATA = {
             company: "India E-Learn",
             role: "Junior Software Engineer",
             period: "Jun 2017 – Jan 2018",
+            location: "Hyderabad, India (On-site)",
             description: [
                 "Participated in performance analysis, design, development, and testing in an Agile environment.",
                 "Reviewed code and debugged errors to improve performance.",
@@ -150,19 +160,29 @@ export const DATA = {
     ] as Experience[],
     projects: [
         {
-            title: "Generative AI Resume Generator",
-            description: "A full-stack application leveraging Google Gemini LLM to automate resume tailoring. Features a FastAPI backend, React/Angular frontend, and intelligent prompt engineering for ATS optimization.",
-            tags: ["FastAPI", "Python", "React", "Google Gemini", "SQLite", "Prompt Engineering"],
+            title: "FinTech SaaS Platform (Innopay)",
+            description: "A cloud-native, microservices-based PaaS processing real-time payments and GST workflows for 1M+ users. Built with an event-driven architecture using Kafka, secured with AWS Cognito/OAuth2, and deployed via CI/CD pipelines. Features role-based dashboards and zero-downtime releases.",
+            tags: ["Java", "Spring Boot", "Kafka", "AWS", "React", "Terraform", "Docker", "Jenkins"],
+        },
+        {
+            title: "Client Management & Compliance Monitoring (CM²) Portal",
+            description: "A centralized portal streamlining client onboarding, document verification, and risk scoring. Replaced manual spreadsheet workflows, reducing issue triage time by 30% using ELK-powered logs. Features customized React UI with Flask REST APIs and Elasticsearch integration.",
+            tags: ["React", "Flask", "Python", "Elasticsearch", "Kibana", "Jenkins", "PostgreSQL"],
         },
         {
             title: "Regulatory Reporting System (FESTER)",
-            description: "Compliance reporting system for FINRA Rule 2360A and LOPR. Handles position aggregation, multi-leg strategies, and complex regulatory validation logic.",
-            tags: ["Java", "Spring Boot", "Oracle 19c", "Autosys", "Shell Scripting"],
+            description: "A critical regulatory reporting platform for FINRA Rule 2360A. Orchestrates daily batch jobs using Autosys, validating raw trading data from Bloomberg and submitting active positions to the OCC. Features a Java backend with Oracle 19c, Python scripting for logic, and a custom UI dashboard for stakeholders.",
+            tags: ["Java", "Oracle 19c", "Autosys", "Python", "Shell Scripting", "Kibana"],
         },
         {
-            title: "Real-time Banking Dashboard",
-            description: "Modernized banking interface utilizing Angular Universal for SSR and optimized performance. Integrated with secure REST APIs and message queues.",
-            tags: ["Angular", "TypeScript", "Node.js", "Express", "Security"],
+            title: "PB WorkQ System Modernization",
+            description: "A legacy system migration from Sybase/C# to Postgres/Java/Angular. Engineered a robust read/write bridge for real-time data replication between old and new systems. Developed a modern Angular UI and scalable REST APIs to manage task operations during the transition phase.",
+            tags: ["Java", "Angular", "PostgreSQL", "REST APIs", "System Migration"],
+        },
+        {
+            title: "Generative AI Resume Generator",
+            description: "A full-stack application leveraging Google Gemini LLM to automate resume tailoring. Features a FastAPI backend, React/Angular frontend, and intelligent prompt engineering for ATS optimization.",
+            tags: ["FastAPI", "Python", "React", "Google Gemini", "SQLite", "Prompt Engineering"],
         },
     ] as Project[],
     certifications: [

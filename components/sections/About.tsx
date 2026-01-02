@@ -45,6 +45,11 @@ export function About() {
                             <p>
                                 Currently, I focus on integrating <strong>Generative AI</strong> and <strong>Cloud-native</strong> solutions to solve complex business problems, reducing operational risks and automating critical workflows.
                             </p>
+                            <div className="p-3 bg-blue-50/50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+                                <p className="text-sm font-medium text-blue-800 dark:text-blue-300">
+                                    I am a <strong>Permanent Resident of Canada</strong>, fully authorized to work for any employer nationwide without sponsorship. Open to new opportunities immediately.
+                                </p>
+                            </div>
                         </div>
 
                         <div className="grid grid-cols-3 gap-4 pt-4">
