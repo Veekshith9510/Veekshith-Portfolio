@@ -11,8 +11,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Veekshith Gullapudi | Senior Full-Stack Java Developer",
-  description: "Senior Full-Stack Java Developer specializing in banking and financial services. Expert in Java, Spring Boot, React, and Cloud Architecture.",
+  title: "Veekshith Gullapudi |Full-Stack Java Developer",
+  description: "Full-Stack Java Developer specializing in banking and financial services. Expert in Java, Spring Boot, React, and Cloud Architecture.",
 };
 
 export default function RootLayout({
