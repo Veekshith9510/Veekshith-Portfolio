@@ -5,8 +5,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { cn } from "@/lib/utils";
-
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -36,7 +36,8 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
         <Analytics />
-      </body>
-    </html>
+        <SpeedInsights />
+      </body >
+    </html >
   );
 }
