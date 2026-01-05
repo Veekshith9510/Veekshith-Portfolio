@@ -61,11 +61,11 @@ export function Hero() {
                         <ArrowRight className="w-4 h-4" />
                     </Link>
                     <Link
-                        href="/resume.pdf" // Placeholder path for now
+                        href="/resume"
                         target="_blank"
                         className="inline-flex items-center justify-center h-12 px-6 rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground font-medium transition-colors gap-2"
                     >
-                        Download Resume
+                        View / Download Resume
                         <Download className="w-4 h-4" />
                     </Link>
                 </motion.div>
