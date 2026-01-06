@@ -54,7 +54,7 @@ export const DATA = {
         email: "gullapudiveekshith@gmail.com",
         phone: "+1 514-773-7344",
         linkedin: "https://www.linkedin.com/in/gullapudiveekshith/",
-        github: "https://github.com/veekshith", // Placeholder, updated if known
+        github: "https://github.com/Veekshith9510", // Placeholder, updated if known
         avatar: "/images/profile-pic.jpg",
     },
     skills: [
