@@ -94,7 +94,7 @@ export const DATA = {
             company: "Innopay Technologies Pvt Ltd",
             role: "Full Stack Developer",
             period: "Nov 2024 – Dec 2025",
-            location: "India (Fully remote)",
+            location: "London, Ontario (Remote)",
             description: [
                 "Developed and maintained Java Spring Boot microservices for payment processing, invoicing, and reconciliation, supporting 1,500–2,000 transactions/minute during peak business hours.",
                 "Implemented event-driven workflows using Apache Kafka (payment → invoice → ledger), reducing synchronous processing latency by ~35% and improving system resilience.",
